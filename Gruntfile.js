@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+  'use strict';
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
@@ -45,7 +45,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.registerTask('test', ['jshint']);
-
   grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify']);
-
 };
